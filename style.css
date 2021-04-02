@@ -100,25 +100,24 @@ body {
 }
 
 .file-upload-image {
-	max-height: 300px;
-	max-width: 300px;
+	max-height: 60%;
+	max-width: 60%;
 	margin: auto;
-	padding: 20px;
+	padding: 10px;
 }
 
-.remove-image {
-	width: 200px;
-	margin: 0;
-	color: #fff;
-	background: #cd4535;
-	border: none;
-	padding: 10px;
-	border-radius: 4px;
-	border-bottom: 4px solid #b02818;
-	transition: all 0.2s ease;
-	outline: none;
-	text-transform: uppercase;
-	font-weight: 700;
+.try-again-btn {
+	border-radius: 40px;
+	border: solid 1.5px #35465d;
+	background-color: #35465d;
+}
+
+.try-again-text {
+	display: block;
+	font-size: 1.5rem;
+	text-align: center;
+	color: #ffffff;
+	padding: 4px 15px;
 }
 
 .remove-image:hover {
@@ -131,6 +130,110 @@ body {
 .remove-image:active {
 	border: 0;
 	transition: all 0.2s ease;
+}
+
+.bar-container {
+	height: 2.7rem;
+}
+
+.기쁨-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	width: 100%;
+	background-color: rgba(235, 166, 190, 0.2);
+}
+
+.기쁨-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: rgba(235, 166, 190, 1);
+}
+
+.슬픔-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	width: 100%;
+	background-color: rgba(27, 175, 234, 0.2);
+}
+
+.슬픔-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: rgba(27, 175, 234, 1);
+}
+
+.두려움-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	width: 100%;
+	background-color: rgba(251, 176, 59, 0.2);
+}
+
+.두려움-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: rgba(251, 176, 59, 1);
+}
+
+.분노-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	width: 100%;
+	background-color: rgba(195, 140, 102, 0.2);
+}
+
+.분노-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: rgba(195, 140, 102, 1);
+}
+
+.혐오-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	width: 100%;
+	background-color: rgba(49, 132, 155, 0.2);
+}
+
+.혐오-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: rgba(49, 132, 155, 1);
+}
+.emotion-label {
+	width: 20%;
+	text-align: left;
+	height: 2rem;
 }
 
 .nav-distance {

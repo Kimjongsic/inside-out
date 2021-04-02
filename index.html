@@ -17,8 +17,10 @@
 		<link rel="stylesheet" href="style.css" />
 
 		<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6065a8f48799a6a8"></script>
-
+		<script
+			type="text/javascript"
+			src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6065a8f48799a6a8"
+		></script>
 	</head>
 
 	<body>
@@ -48,9 +50,12 @@
 							<a class="nav-link" href="#"></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-								></a
-							>
+							<a
+								class="nav-link disabled"
+								href="#"
+								tabindex="-1"
+								aria-disabled="true"
+							></a>
 						</li>
 					</ul>
 				</div>
@@ -86,14 +91,17 @@
 					<p class="text-center">AI가 당신의 감정을 분석중입니다.</p>
 				</div>
 				<p class="result-message"></p>
-				<div id="label-container"></div>
+				<div id="label-container" class="d-flex flex-column justify-content-around"></div>
 
-                <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                <div class="addthis_inline_share_toolbox_qgt9"></div>
+				<!-- Go to www.addthis.com/dashboard to customize your tools -->
+				<div class="addthis_inline_share_toolbox_qgt9"></div>
 
-				<div class="image-title-wrap">
-					<button type="button p-2" onclick="removeUpload()" class="remove-image">
-						Remove <span class="image-title">Uploaded Image</span>
+				<div class="pt-3 image-title-wrap">
+					<button
+						type="button p-2"
+						class="try-again-btn" onclick="window.location.reload();"
+					>
+						<span class="try-again-text">다른 사진으로 재시도</span>
 					</button>
 				</div>
 			</div>
@@ -174,8 +182,9 @@
 				maxPredictions = model.getTotalClasses();
 				labelContainer = document.getElementById('label-container');
 				for (let i = 0; i < maxPredictions; i++) {
-					// and class labels
-					labelContainer.appendChild(document.createElement('div'));
+					var element = document.createElement('div');
+					element.classList.add('d-flex');
+					labelContainer.appendChild(element);
 				}
 			}
 
@@ -207,10 +216,54 @@
 						resultMessege = '알수없음';
 				}
 				$('.result-message').html(resultMessege);
+				var barWidth;
 				for (let i = 0; i < maxPredictions; i++) {
-					const classPrediction =
-						prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
-					labelContainer.childNodes[i].innerHTML = classPrediction;
+					if (prediction[i].probability.toFixed(2) > 0.1) {
+						barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + '%';
+					} else if (prediction[i].probability.toFixed(2) >= 0.01) {
+						barWidth = '4%';
+					} else {
+						barWidth = '2%';
+					}
+					var labelTitle;
+					switch (prediction[i].className) {
+						case '기쁨':
+							labelTitle = '기쁨';
+							break;
+						case '슬픔':
+							labelTitle = '슬픔';
+							break;
+						case '두려움':
+							labelTitle = '두려움';
+							break;
+						case '분노':
+							labelTitle = '분노';
+							break;
+						case '혐오':
+							labelTitle = '혐오';
+							break;
+						default:
+							labelTitle = '알수없음';
+					}
+					var label =
+						"<div class='emotion-label d-flex align-items-center'>" +
+						labelTitle +
+						'</div>';
+					var bar =
+						"<div class='bar-container position-relative container'><div class='" +
+						prediction[i].className +
+						"-box'></div><div class='d-flex justify-content-center align-items-center " +
+						prediction[i].className +
+						"-bar' style='width: " +
+						barWidth +
+						"'><span class='d-block percent-text'>" +
+						Math.round(prediction[i].probability.toFixed(2) * 100) +
+						'%</span></div></div>';
+					labelContainer.childNodes[i].innerHTML = label + bar;
+					// for (let i = 0; i < maxPredictions; i++) {
+					// 	const classPrediction =
+					// 		prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
+					// 	labelContainer.childNodes[i].innerHTML = classPrediction;
 				}
 			}
 		</script>
