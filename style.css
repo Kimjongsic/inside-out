@@ -1,6 +1,8 @@
 body {
-	font-family: sans-serif;
+	font-family: NanumSquareR;
 	background-color: #ffffff;
+	 box-sizing: border-box;
+  color: #35465d;
 }
 
 .file-upload {
@@ -143,7 +145,7 @@ body {
 	height: 2rem;
 	border-radius: 10px;
 	width: 100%;
-	background-color: rgba(235, 166, 190, 0.2);
+	background-color: rgba(242, 205, 38, 0.2);
 }
 
 .기쁨-bar {
@@ -152,7 +154,7 @@ body {
 	left: 0;
 	height: 2rem;
 	border-radius: 10px;
-	background-color: rgba(235, 166, 190, 1);
+	background-color: rgba(242, 205, 38, 1);
 }
 
 .슬픔-box {
@@ -162,7 +164,7 @@ body {
 	height: 2rem;
 	border-radius: 10px;
 	width: 100%;
-	background-color: rgba(27, 175, 234, 0.2);
+	background-color: rgba(48, 72, 207, 0.2);
 }
 
 .슬픔-bar {
@@ -171,7 +173,7 @@ body {
 	left: 0;
 	height: 2rem;
 	border-radius: 10px;
-	background-color: rgba(27, 175, 234, 1);
+	background-color: rgba(48, 72, 207, 1);
 }
 
 .두려움-box {
@@ -181,7 +183,7 @@ body {
 	height: 2rem;
 	border-radius: 10px;
 	width: 100%;
-	background-color: rgba(251, 176, 59, 0.2);
+	background-color: rgba(190, 77, 219, 0.2);
 }
 
 .두려움-bar {
@@ -190,7 +192,7 @@ body {
 	left: 0;
 	height: 2rem;
 	border-radius: 10px;
-	background-color: rgba(251, 176, 59, 1);
+	background-color: rgba(190, 77, 219, 1);
 }
 
 .분노-box {
@@ -200,7 +202,7 @@ body {
 	height: 2rem;
 	border-radius: 10px;
 	width: 100%;
-	background-color: rgba(195, 140, 102, 0.2);
+	background-color: rgba(209, 33, 36, 0.2);
 }
 
 .분노-bar {
@@ -209,7 +211,7 @@ body {
 	left: 0;
 	height: 2rem;
 	border-radius: 10px;
-	background-color: rgba(195, 140, 102, 1);
+	background-color: rgba(209, 33, 36, 1);
 }
 
 .혐오-box {
@@ -219,7 +221,7 @@ body {
 	height: 2rem;
 	border-radius: 10px;
 	width: 100%;
-	background-color: rgba(49, 132, 155, 0.2);
+	background-color: rgba(12, 157, 53, 0.2);
 }
 
 .혐오-bar {
@@ -228,7 +230,7 @@ body {
 	left: 0;
 	height: 2rem;
 	border-radius: 10px;
-	background-color: rgba(49, 132, 155, 1);
+	background-color: rgba(12, 157, 53, 1);
 }
 .emotion-label {
 	width: 20%;
