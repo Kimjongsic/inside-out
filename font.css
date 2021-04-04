@@ -4,5 +4,15 @@
     font-family: 'Inside Out Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Inside Out Regular'), url('InsideOut-DAp0.woff') format('woff');
+    src: url('InsideOut-DAp0.woff') format('woff');
     }
+
+.head{
+	font-family: 'Inside Out Regular';
+		font-size: 100px;
+}
+
+.title{
+    font-family: 'Sunflower', sans-serif;
+	font-size: 50px;
+}

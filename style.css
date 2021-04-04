@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'Inside Out Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('InsideOut-DAp0.woff') format('woff');
+    }
+
 body {
-	font-family: NanumSquareR;
+	 font-family: 'Sunflower', sans-serif;
 	background-color: #ffffff;
 	 box-sizing: border-box;
   color: #35465d;
@@ -91,7 +98,6 @@ body {
 
 .drag-text h3 {
 	width: 58%;
-	font-family: NanumSquareR;
 	font-weight: 500;
 	font-size: 2rem;
 	line-height: 1.53;
@@ -115,6 +121,7 @@ body {
 }
 
 .try-again-text {
+	font-weight: bold;
 	display: block;
 	font-size: 1.5rem;
 	text-align: center;
@@ -232,10 +239,22 @@ body {
 	border-radius: 10px;
 	background-color: rgba(12, 157, 53, 1);
 }
+
+.percent-text{
+	font-weight: bold;
+	font-size: 1rem;
+	color: #ffffff;
+}
 .emotion-label {
+	font-weight: bold;
 	width: 20%;
-	text-align: left;
+	text-align: center;
 	height: 2rem;
+}
+
+#label-container {
+    width: 70%;
+    margin: 0 auto;
 }
 
 .nav-distance {
@@ -243,7 +262,7 @@ body {
 }
 
 .navbar-light .navbar-brand {
-	font-family: NanumSquareR;
+	font-family: 'Inside Out Regular';
 	line-height: 1.68;
 	text-align: left;
 	color: #35465d;
@@ -258,7 +277,7 @@ body {
 }
 
 .title {
-	font-family: NanumSquareR;
+	font-family: 'Inside Out Regular';
 	font-size: 2.5rem;
 	line-height: 1.67;
 	text-align: center;
@@ -266,7 +285,7 @@ body {
 }
 
 .subtitle {
-	font-family: NanumSquareR;
+	font-weight: bold;
 	font-size: 2rem;
 	line-height: 1.53;
 	text-align: center;
@@ -276,9 +295,9 @@ body {
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
 	html {
-		font-size: 12px;
+		font-size: 10px;
 	}
 	.navbar-brand {
-		font-size: 1.7rem;
+		font-size: 2rem;
 	}
 }
