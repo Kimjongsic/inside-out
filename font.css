@@ -16,3 +16,8 @@
     font-family: 'Sunflower', sans-serif;
 	font-size: 50px;
 }
+
+.image img{
+	width: 50%;
+	height: 50%;
+}

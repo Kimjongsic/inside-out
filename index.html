@@ -195,27 +195,34 @@
 				const prediction = await model.predict(image, false);
 				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
 				console.log(prediction[0].className);
-				var resultMessege;
+				var resultMessege, resultImage;
 				switch (prediction[0].className) {
 					case '기쁨':
-						resultMessege = '기쁨';
+						resultMessege = '기쁨'
+						resultImage =  '<img src="icon/joy.png" alt="Joy"></img>';
 						break;
 					case '슬픔':
-						resultMessege = '슬픔';
+						resultMessege = '슬픔'
+						resultImage =  '<img src="icon/sadness.png" alt="Sadness"></img>';
 						break;
 					case '두려움':
-						resultMessege = '두려움';
+						resultMessege = '두려움'
+						resultImage =  '<img src="icon/fear.png" alt="Fear"></img>';
 						break;
 					case '분노':
-						resultMessege = '분노';
+						resultMessege = '분노'
+						resultImage =  '<img src="icon/anger.png" alt="Anger"></img>';
 						break;
 					case '혐오':
-						resultMessege = '까칠';
+						resultMessege = '까칠'
+						resultImage =  '<img src="icon/disgust.png" alt="Disgust"></img>';
 						break;
 					default:
 						resultMessege = '알수없음';
 				}
-				$('.result-message').html(resultMessege);
+				var messege = "<div class='" + prediction[0].className + "-emotion-messege'>" + resultMessege + "</div>"
+				var imege = "<div class='" + prediction[0].className + "-emotion-image'>" + resultImage + "</div>"
+				$('.result-message').html(messege+imege);
 				var barWidth;
 				for (let i = 0; i < maxPredictions; i++) {
 					if (prediction[i].probability.toFixed(2) > 0.1) {
